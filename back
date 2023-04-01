@@ -1,0 +1,65 @@
+<div class="wrapper active">
+	{{FrontSide}}
+
+	{{^Resposta}}
+	{{^Errado}}
+	{{#Correto}}
+	<div class="rightTitle">
+		<h2>Correto</h2>
+	</div>
+
+	<div class="rightContent">
+		<p>{{Correto}}</p>
+	</div>
+	{{/Correto}}
+	{{/Errado}}
+	{{#Errado}}
+	<div class="wrongTitle">
+		<h2>Errado</h2>
+	</div>
+
+	<div class="wrongContent">
+		<p>{{Errado}}</p>
+	</div>
+	{{/Errado}}
+	{{/Resposta}}
+	
+	{{#Resposta}}
+	<div class="answerTitle">
+		<h2>Resposta</h2>
+	</div>
+
+	<div class="rightContent">
+		<p>{{Resposta}}</p>
+	</div>
+	{{/Resposta}}
+	
+	{{#SaibaMais}}
+	<button class="getToKnowButton"><span>+</span> Saiba Mais</button>
+</div>
+
+<div class="getToKnow">
+	<h2>#{{SaibaMaisTitulo}}</h2>
+	<p>{{SaibaMais}}</p>
+	<div class="closeButton">x</div>
+</div>
+
+<script>
+	revealButton = document.querySelector('.getToKnowButton');
+	revealPopUp = document.querySelector('.getToKnow');
+	wrapper = document.querySelector('.wrapper');
+	closeButton = document.querySelector('.closeButton');
+
+	revealButton.addEventListener('click', () => {
+		revealPopUp.classList.add('active');
+		wrapper.classList.remove('active');
+	});
+
+	closeButton.addEventListener('click', () => {
+		revealPopUp.classList.remove('active');
+		wrapper.classList.add('active');
+	});
+</script>
+{{/SaibaMais}}
+<p>Criado por: <a href="https://www.instagram.com/trilhadostribunais1/?igshid=ZDdkNTZiNTM%3D"> @trilhadostribunais1
+</a></p>
