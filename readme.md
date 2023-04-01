@@ -1,0 +1,9 @@
+1. TituloDeck
+2. Titulo
+3. Pergunta
+4. Dica
+5. Correto
+6. Errado
+7. Resposta
+8. SaibaMaisTitulo
+9. SaibaMais
